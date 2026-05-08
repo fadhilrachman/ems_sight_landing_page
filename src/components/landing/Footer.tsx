@@ -13,13 +13,13 @@ export function Footer() {
               <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
                 <img
                   src="https://arnatech.ap-south-1.linodeobjects.com/public%2Femsplus-mark.svg"
-                  alt="EMS+ logo"
+                  alt="EMSight logo"
                   className="w-full h-full"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
-              <span className="text-xl font-bold">EMS+ by Arnatech</span>
+              <span className="text-xl font-bold">EMSight by Arnatech</span>
             </div>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               AI-powered employee monitoring, KPI management, and smart attendance for modern organizations.

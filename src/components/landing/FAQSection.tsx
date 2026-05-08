@@ -14,8 +14,8 @@ const FAQ_DATA = [
     answer: "Yes. Include/exclude rules for directories, screenshot intervals, and sensitive-term lists are fully configurable through the admin dashboard."
   },
   {
-    question: "Does EMS+ replace our OKR/KPI tool?",
-    answer: "No. EMS+ integrates with your existing OKR/KPI system, aligning goals with verified device activities and showing progress widgets."
+    question: "Does EMSight replace our OKR/KPI tool?",
+    answer: "No. EMSight integrates with your existing OKR/KPI system, aligning goals with verified device activities and showing progress widgets."
   },
   {
     question: "How does geo attendance work?",
@@ -23,7 +23,7 @@ const FAQ_DATA = [
   },
   {
     question: "Will employees be notified about monitoring?",
-    answer: "We recommend transparent policy notices. Admins can provide policy banners and documentation; EMS+ provides audit trails for compliance verification."
+    answer: "We recommend transparent policy notices. Admins can provide policy banners and documentation; EMSight provides audit trails for compliance verification."
   },
   {
     question: "What about performance impact?",
@@ -70,7 +70,7 @@ export function FAQSection() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400">Everything you need to know about EMS+</p>
+          <p className="text-xl text-gray-600 dark:text-gray-400">Everything you need to know about EMSight</p>
         </div>
         
         <div className="space-y-4">

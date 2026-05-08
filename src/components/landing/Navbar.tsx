@@ -13,7 +13,13 @@ export function Navbar() {
 
   useEffect(() => {
     const saved = localStorage.getItem("darkMode");
-    const isDark = saved !== null ? saved === "true" : true; 
+    let isDark: boolean;
+    if (saved !== null) {
+      isDark = saved === "true";
+    } else {
+      isDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? false;
+      localStorage.setItem("darkMode", String(isDark));
+    }
     setDarkMode(isDark);
     applyTheme(isDark);
   }, []);
@@ -43,12 +49,12 @@ export function Navbar() {
             <div className="w-10 h-10 rounded-lg flex items-center justify-center shadow-lg overflow-hidden">
               <img
                 src="https://arnatech.ap-south-1.linodeobjects.com/public%2Femsplus-mark.svg"
-                alt="EMS+ logo"
+                alt="EMSight logo"
                 className="w-full h-full"
               />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              EMS+ by Arnatech
+              EMSight by Arnatech
             </span>
           </div>
 

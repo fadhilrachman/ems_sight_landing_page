@@ -56,12 +56,14 @@ export function HeroSection() {
 
           {/* Strapline */}
           <div
-            className="inline-block glass-card px-6 py-3 rounded-full fade-in-up"
+            className="inline-block glass-card px-6 py-3 rounded-full fade-in-up whitespace-nowrap"
             style={{ animationDelay: "0.6s" }}
           >
             <p className="text-lg font-semibold">
               <span className="text-blue-600 dark:text-blue-400">See the Unseen</span>
+              {" "}
               <span className="mx-2">-</span>
+              {" "}
               <span className="text-purple-600 dark:text-purple-400">Secure the Inside</span>
             </p>
           </div>

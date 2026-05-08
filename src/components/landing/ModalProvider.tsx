@@ -105,9 +105,9 @@ export function ModalProvider({ children }: { children: ReactNode }) {
                 <div className="prose prose-invert max-w-none text-gray-200 policy-content">
                   <p className="text-sm opacity-80">Last updated: 13 Oct 2025</p>
                   <h4>1. Who We Are</h4>
-                  <p>EMS+ is an employee monitoring and productivity platform operated by your organization (the "Customer"). In most deployments, the Customer is the <strong>Data Controller</strong> of the personal data processed in EMS+, and ARNA Technology acts as a <strong>Data Processor</strong>/service provider. Where ARNA Technology operates EMS+ directly for a client, ARNA Technology may act as controller for limited service operations data (e.g., support tickets, billing contacts).</p>
+                  <p>EMSight is an employee monitoring and productivity platform operated by your organization (the "Customer"). In most deployments, the Customer is the <strong>Data Controller</strong> of the personal data processed in EMSight, and ARNA Technology acts as a <strong>Data Processor</strong>/service provider. Where ARNA Technology operates EMSight directly for a client, ARNA Technology may act as controller for limited service operations data (e.g., support tickets, billing contacts).</p>
                   <h4>2. Scope</h4>
-                  <p>This Privacy Policy describes how EMS+ processes information collected from endpoints (devices), users, and administrators when the platform is used by Customer's workforce. It does not replace your company's internal monitoring policy; rather, it should be read together with it.</p>
+                  <p>This Privacy Policy describes how EMSight processes information collected from endpoints (devices), users, and administrators when the platform is used by Customer's workforce. It does not replace your company's internal monitoring policy; rather, it should be read together with it.</p>
                   <h4>3. Information We Collect</h4>
                   <ul>
                     <li><strong>Activity &amp; Usage Data</strong>: application names, window titles, website titles/URLs, durations, clipboard text events (if enabled), file operations metadata (path, action, size), and USB device events.</li>
@@ -128,7 +128,7 @@ export function ModalProvider({ children }: { children: ReactNode }) {
                   <p>Depending on jurisdiction and Customer policy, processing may rely on one or more of: legitimate interests in security and productivity; performance of a contract; compliance with legal obligations; or consent where required. The Customer determines the appropriate legal basis for workforce monitoring within its organization.</p>
                   <h4>6. Data Sharing &amp; Transfers</h4>
                   <ul>
-                    <li><strong>Sub‑processors</strong>: cloud storage (e.g., S3‑compatible), email/push notification providers, analytics and security vendors used to operate EMS+. We require appropriate data protection commitments by contract.</li>
+                    <li><strong>Sub‑processors</strong>: cloud storage (e.g., S3‑compatible), email/push notification providers, analytics and security vendors used to operate EMSight. We require appropriate data protection commitments by contract.</li>
                     <li><strong>Intra‑group/International Transfers</strong>: where data moves across borders, we use appropriate safeguards (e.g., SCCs or equivalent mechanisms) as applicable.</li>
                     <li><strong>Legal Requests</strong>: data may be disclosed to competent authorities when required by law, following due process.</li>
                   </ul>
@@ -139,13 +139,13 @@ export function ModalProvider({ children }: { children: ReactNode }) {
                     <li>Media in S3/local storage per deployment; access controlled by Customer policy.</li>
                   </ul>
                   <h4>8. Retention</h4>
-                  <p>Retention periods are defined by the Customer's policy and regulatory requirements. EMS+ provides tools to configure retention, export data, and delete content upon authorized request.</p>
+                  <p>Retention periods are defined by the Customer's policy and regulatory requirements. EMSight provides tools to configure retention, export data, and delete content upon authorized request.</p>
                   <h4>9. Your Rights</h4>
                   <p>Subject to applicable law and relationship with the Customer, you may have rights to access, rectify, erase, restrict, port, or object to processing of your personal data. Requests should be directed to your employer (the Customer). ARNA Technology will support the Customer in responding to such requests.</p>
                   <h4>10. Cookies &amp; Similar Technologies</h4>
-                  <p>EMS+ primarily uses essential cookies/local storage for authentication and preferences (e.g., theme). Optional analytics cookies are only used if configured by the Customer with appropriate notices.</p>
+                  <p>EMSight primarily uses essential cookies/local storage for authentication and preferences (e.g., theme). Optional analytics cookies are only used if configured by the Customer with appropriate notices.</p>
                   <h4>11. Children</h4>
-                  <p>EMS+ is a business product not intended for children. It should only be used for workforce monitoring by organizations.</p>
+                  <p>EMSight is a business product not intended for children. It should only be used for workforce monitoring by organizations.</p>
                   <h4>12. Contact</h4>
                   <p>Questions about this policy or data protection should be sent to <a href="mailto:contact@arnatech.id" className="underline">contact@arnatech.id</a>. For workforce monitoring matters, contact your organization's administrator or HR.</p>
                   <h4>13. Changes</h4>
@@ -180,7 +180,7 @@ export function ModalProvider({ children }: { children: ReactNode }) {
                 <div className="prose prose-invert max-w-none text-gray-200 policy-content">
                   <p className="text-sm opacity-80">Last updated: 13 Oct 2025</p>
                   <h4>1. Agreement to Terms</h4>
-                  <p>These Terms of Service (the "Terms") govern access to and use of EMS+ by organizations and their authorized users ("Customer", "you"). By accessing EMS+, you agree to these Terms and any policies referenced herein.</p>
+                  <p>These Terms of Service (the "Terms") govern access to and use of EMSight by organizations and their authorized users ("Customer", "you"). By accessing EMSight, you agree to these Terms and any policies referenced herein.</p>
                   <h4>2. Accounts &amp; Access</h4>
                   <ul>
                     <li>Customer is responsible for configuring roles/permissions and for maintaining the confidentiality of credentials.</li>
@@ -195,21 +195,21 @@ export function ModalProvider({ children }: { children: ReactNode }) {
                     <li>No use that violates privacy, employment, export, or other applicable laws.</li>
                   </ul>
                   <h4>4. Customer Data &amp; Ownership</h4>
-                  <p>All monitoring data and content collected through EMS+ is owned and controlled by the Customer. ARNA Technology processes such data solely to provide the service, in accordance with Customer instructions and applicable data protection agreements.</p>
+                  <p>All monitoring data and content collected through EMSight is owned and controlled by the Customer. ARNA Technology processes such data solely to provide the service, in accordance with Customer instructions and applicable data protection agreements.</p>
                   <h4>5. Security &amp; Privacy</h4>
                   <p>We implement administrative, technical, and physical safeguards appropriate to the risk, including HTTPS/TLS, RBAC, audit logs, and secure storage. Privacy practices are described in our Privacy Policy.</p>
                   <h4>6. Availability &amp; Support</h4>
                   <p>We aim for high availability but do not guarantee uninterrupted operation. Planned maintenance or factors beyond our control may cause downtime. Support scope and SLAs (if any) are defined in the applicable order or agreement.</p>
                   <h4>7. Third‑Party Services</h4>
-                  <p>EMS+ may integrate with third‑party services (e.g., storage, notifications, OKR/attendance systems). Customer's use of third‑party services is governed by those providers' terms and privacy notices.</p>
+                  <p>EMSight may integrate with third‑party services (e.g., storage, notifications, OKR/attendance systems). Customer's use of third‑party services is governed by those providers' terms and privacy notices.</p>
                   <h4>8. Term &amp; Termination</h4>
                   <ul>
-                    <li>These Terms apply for the subscription term or while you access EMS+.</li>
+                    <li>These Terms apply for the subscription term or while you access EMSight.</li>
                     <li>Either party may terminate for material breach not cured within a reasonable period.</li>
                     <li>Upon termination, Customer may export data within a limited window; thereafter data may be deleted according to retention policies.</li>
                   </ul>
                   <h4>9. Warranties &amp; Disclaimers</h4>
-                  <p>EMS+ is provided "as is" and "as available." To the maximum extent permitted by law, we disclaim implied warranties of merchantability, fitness for a particular purpose, and non‑infringement.</p>
+                  <p>EMSight is provided "as is" and "as available." To the maximum extent permitted by law, we disclaim implied warranties of merchantability, fitness for a particular purpose, and non‑infringement.</p>
                   <h4>10. Limitation of Liability</h4>
                   <p>To the maximum extent permitted by law, neither party will be liable for indirect, incidental, special, consequential, or punitive damages, or for lost profits, revenues, or data. Each party's aggregate liability under these Terms is limited to the amounts paid or payable for the service in the 12 months preceding the claim.</p>
                   <h4>11. Confidentiality</h4>

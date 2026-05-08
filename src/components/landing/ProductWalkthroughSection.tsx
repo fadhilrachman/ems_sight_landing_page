@@ -4,19 +4,19 @@ const slides = [
   {
     src: "https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-1.png",
     mobileSrc: "https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-mobile-1.png",
-    alt: "EMS+ Dashboard - Activity Overview",
+    alt: "EMSight Dashboard - Activity Overview",
     label: "Activity Overview",
   },
   {
     src: "https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-2.png",
     mobileSrc: "https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-mobile-2.png",
-    alt: "EMS+ Dashboard - Risk Detection",
+    alt: "EMSight Dashboard - Risk Detection",
     label: "Risk Detection",
   },
   {
     src: "https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-3.png",
     mobileSrc: "https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-mobile-3.png",
-    alt: "EMS+ Dashboard - Analytics",
+    alt: "EMSight Dashboard - Analytics",
     label: "Analytics Dashboard",
   },
 ];
