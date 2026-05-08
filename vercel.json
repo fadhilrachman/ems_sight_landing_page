@@ -1,0 +1,5 @@
+{
+  "outputDirectory": "dist/client",
+  "framework": null,
+  "buildCommand": "npm run build"
+}

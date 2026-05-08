@@ -5,7 +5,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [
-    vike(),
+    vike({ prerender: true }),
     react(),
   ],
   resolve: {
