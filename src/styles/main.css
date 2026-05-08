@@ -1,12 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+/* System font — matches emsight.id default (no custom font import) */
 
 @import "tailwindcss";
+
+/* Enable class-based dark mode — dark: variants trigger when html.dark is set */
+@custom-variant dark (&:is(.dark *));
 
 /* ─── CSS Variables / Design Tokens ─── */
 :root {
   /* Brand Colors */
-  --color-bg-primary: #07070f;
-  --color-bg-secondary: #0d0d1a;
+  --color-bg-primary: #0a0a0f;
+  --color-bg-secondary: #1a1a2e;
+  --color-bg-accent: #16213e;
   --color-bg-card: #111127;
   --color-bg-card-hover: #16163a;
 
@@ -23,7 +27,7 @@
   --color-border-accent: rgba(124, 58, 237, 0.3);
 
   /* Typography */
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
 /* ─── Base Reset ─── */
@@ -41,21 +45,40 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ─── Body — exact match dengan element style emsight.id ─── */
+/* ref body class: bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50
+                   dark:from-dark-bg dark:via-dark-secondary dark:to-dark-accent
+                   text-gray-900 dark:text-gray-100 transition-colors duration-300 */
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
   line-height: 1.6;
   min-height: 100vh;
+  /* bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 */
+  background-image: linear-gradient(to bottom right, #eff6ff, #eef2ff, #faf5ff);
+  /* text-gray-900 */
+  color: rgb(17 24 39);
+  /* transition-colors duration-300 */
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
+html.dark body {
+  /* dark:from-dark-bg dark:via-dark-secondary dark:to-dark-accent */
+  background-image: linear-gradient(to bottom right, #0a0a0f, #1a1a2e, #16213e);
+  /* dark:text-gray-100 */
+  color: rgb(243 244 246);
+}
+
 
 /* ─── Scrollbar ─── */
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-bg-secondary);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-accent-purple);
   border-radius: 3px;
@@ -83,4 +106,105 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+/* ─── Glassmorphism — exact from emsight.id source ─── */
+
+/* Default (light mode) */
+.navbar-glass {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Dark mode navbar glass — more transparent so body content shows through blurred */
+html.dark .navbar-glass {
+  background: rgba(26, 26, 46, 0.45) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ─── Glass Card — used by hero buttons, strapline, feature cards, etc ─── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+html.dark .glass-card {
+  background: rgba(26, 26, 46, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ─── Glass — lighter version used by CTA buttons, footer, navbar elements ─── */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+html.dark .glass {
+  background: rgba(26, 26, 46, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ─── Section alternate background — bg-white/50 dark:bg-dark-secondary/50 ─── */
+.section-alt {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+html.dark .section-alt {
+  background: rgba(26, 26, 46, 0);
+}
+
+
+/* ─── Policy content (Privacy/ToS modal) ─── */
+.policy-content h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #e2e8f0;
+}
+
+.policy-content p,
+.policy-content li {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+}
+
+.policy-content ul {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+/* ─── Fade-in-up animation — hero entrance effect ─── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* ─── Tailwind v4 dark-mode custom colors (matching emsight.id CSS vars) ─── */
+@theme {
+  --color-dark-bg: #0a0a0f;
+  --color-dark-secondary: #1a1a2e;
+  --color-dark-accent: #16213e;
 }
