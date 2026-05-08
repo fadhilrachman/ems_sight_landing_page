@@ -1,0 +1,1205 @@
+
+<!DOCTYPE HTML>
+<html lang="en" class="scroll-smooth" x-data="{ darkMode: localStorage.getItem('darkMode') === 'true' }" :class="{ 'dark': darkMode }">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS+ |  Monitor. Align. Attend.</title>
+    <meta name="description" content="AI-powered activity monitoring, KPI management, and smart attendance for sharper productivity, stronger security, and smarter insights.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="keywords" content="Employee Monitoring System, EMS, EMS+, AI monitoring, KPI, OKR, OKR management, KPI management, smart attendance, geo attendance, geofencing, productivity analytics, insider risk, data loss prevention, phishing detection, screenshot OCR, USB monitoring, file access monitoring, website monitoring, application monitoring, workplace analytics, ARNA Technology">
+    <meta name="author" content="ARNA Technology">
+    <meta name="theme-color" content="#0a0a0f">
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://arnatech.id/">
+    <link rel="alternate" hreflang="en" href="https://arnatech.id/" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="https://arnatech.ap-south-1.linodeobjects.com/public%2Femsplus-mark.svg">
+    <link rel="alternate icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EMS+ |  Monitor. Align. Attend.">
+    <meta property="og:description" content="AI-powered activity monitoring, KPI management, and smart attendance for sharper productivity, stronger security, and smarter insights.">
+    <meta property="og:url" content="https://arnatech.id/">
+    <meta property="og:site_name" content="ARNA Technology">
+    <meta property="og:image" content="https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-2.png">
+    <meta property="og:image:alt" content="EMS+ Dashboard - Risk Detection">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="2082">
+    <meta property="og:image:height" content="935">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EMS+ |  Monitor. Align. Attend.">
+    <meta name="twitter:description" content="AI-powered activity monitoring, KPI management, and smart attendance for sharper productivity, stronger security, and smarter insights.">
+    <meta name="twitter:image" content="https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-2.png">
+
+    <!-- Performance: preconnect/dns-prefetch to critical CDNs -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            'bg': '#0a0a0f',
+                            'secondary': '#1a1a2e',
+                            'accent': '#16213e'
+                        },
+                        primary: {
+                            '50': '#eff6ff',
+                            '100': '#dbeafe',
+                            '200': '#bfdbfe',
+                            '300': '#93c5fd',
+                            '400': '#60a5fa',
+                            '500': '#3b82f6',
+                            '600': '#2563eb',
+                            '700': '#1d4ed8',
+                            '800': '#1e40af',
+                            '900': '#1e3a8a',
+                        }
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Alpine.js core & Collapse plugin -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ARNA Technology",
+      "url": "https://arnatech.id/",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "contact@arnatech.id",
+        "areaServed": "ID"
+      }]
+    }
+    </script>
+
+    <!-- Structured Data: SoftwareApplication (EMS+) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "EMS+",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows, macOS",
+      "description": "AI-powered activity monitoring, KPI/OKR management, and geo-based smart attendance for productivity, security, and insights.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "url": "https://arnatech.id/",
+      "image": "https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-2.png"
+    }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "EMS+ by ARNA Technology",
+      "url": "https://arnatech.id/",
+      "inLanguage": "en"
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What platforms do the agents support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Windows and macOS. Agents capture application, website, screenshot/OCR, file, USB, and clipboard events depending on OS capabilities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is data secured?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HTTPS/TLS in transit, role-based access control, signed JWT (RS256), audit logging, and secure media storage on S3/local per deployment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we customize what's monitored?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Organizations can configure include/exclude rules, screenshot intervals, sensitive-term lists, and alert policies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does EMS+ replace our OKR/KPI tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. EMS+ integrates with your OKR/KPI system and compares progress against device activities to validate momentum."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does geo attendance work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Users clock-in/out with geolocation and timestamps. Daily plans and end-of-day results are attached to each day. Optional geofencing is available."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        [x-cloak] { display: none !important; }
+        
+        /* Glassmorphism utility classes */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dark .glass {
+            background: rgba(26, 26, 46, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .dark .glass-card {
+            background: rgba(26, 26, 46, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Animated gradient background */
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        .dark .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(59, 130, 246, 0.5);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(59, 130, 246, 0.8);
+        }
+        
+        /* Fade-in animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        /* Policy/TOS content formatting */
+        .policy-content {
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: rgba(255,255,255,0.9);
+        }
+        .policy-content h3,
+        .policy-content h4 { 
+            margin-top: 1rem; 
+            margin-bottom: 0.5rem; 
+            font-weight: 700; 
+            color: #fff; 
+        }
+        .policy-content p { 
+            margin-bottom: 0.75rem; 
+        }
+        .policy-content ul,
+        .policy-content ol {
+            margin: 0.25rem 0 0.75rem 0;
+            padding-left: 1.5rem; /* ensure proper indent */
+            list-style-position: outside; /* bullets outside for consistent indent */
+        }
+        .policy-content ul { list-style-type: disc; }
+        .policy-content ul ul { list-style-type: circle; }
+        .policy-content ol { list-style-type: decimal; }
+        .policy-content li { 
+            margin-bottom: 0.25rem; 
+        }
+        .policy-content a { 
+            text-decoration: underline; 
+        }
+        /* Justify only body text (not headings) */
+        .policy-content p,
+        .policy-content li { text-align: justify; }
+
+        /* Base aspect ratio for desktop/tablet */
+        .slider-aspect { aspect-ratio: 2082 / 935; }
+        /* Override for mobile portrait screenshots */
+        @media (max-width: 640px) {
+            .slider-aspect { aspect-ratio: 496 / 935; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-dark-bg dark:via-dark-secondary dark:to-dark-accent text-gray-900 dark:text-gray-100 transition-colors duration-300" x-data="landingPage()">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center shadow-lg overflow-hidden">
+                        <img src="https://arnatech.ap-south-1.linodeobjects.com/public%2Femsplus-mark.svg" alt="EMS+ logo" class="w-full h-full"/>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">EMS+ by Arnatech</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Features</a>
+                    <a href="#security" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Security</a>
+                    <a href="#use-cases" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Use Cases</a>
+                    <a href="#faq" class="hover:text-blue-600 dark:hover:text-blue-400 transition">FAQ</a>
+                    <button @click="darkMode = !darkMode; localStorage.setItem('darkMode', darkMode)" 
+                            class="p-2 rounded-lg hover:bg-white/20 dark:hover:bg-gray-800/50 transition">
+                        <i class="fas" :class="darkMode ? 'fa-sun' : 'fa-moon'"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 rounded-lg hover:bg-white/20 dark:hover:bg-gray-800/50">
+                    <i class="fas" :class="mobileMenuOpen ? 'fa-times' : 'fa-bars'"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-cloak x-transition class="md:hidden glass-card border-t border-white/20">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#features" @click="mobileMenuOpen = false" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition">Features</a>
+                <a href="#security" @click="mobileMenuOpen = false" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition">Security</a>
+                <a href="#use-cases" @click="mobileMenuOpen = false" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition">Use Cases</a>
+                <a href="#faq" @click="mobileMenuOpen = false" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition">FAQ</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-400/30 dark:bg-blue-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl animate-pulse"></div>
+            <div class="absolute top-40 right-10 w-72 h-72 bg-purple-400/30 dark:bg-purple-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-indigo-400/30 dark:bg-indigo-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl animate-pulse" style="animation-delay: 4s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in-up">
+                    <span class="block text-gray-900 dark:text-white">What You'll Love</span>
+                    <span class="block text-gray-600 dark:text-gray-400 text-3xl md:text-4xl mt-2">(But Your Employees Won't)</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-4xl mx-auto fade-in-up" style="animation-delay: 0.2s;">
+                    Being tracked is never fun. But with AI-powered activity monitoring, KPI management, and smart attendance, your business gains <span class="font-semibold text-blue-600 dark:text-blue-400">sharper productivity</span>, <span class="font-semibold text-purple-600 dark:text-purple-400">stronger security</span>, and <span class="font-semibold text-indigo-600 dark:text-indigo-400">smarter insights</span>.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 fade-in-up" style="animation-delay: 0.4s;">
+                    <button @click="showCTAModal = true" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full font-semibold shadow-2xl hover:shadow-blue-500/50 transition-all transform hover:scale-105">
+                        <i class="fas fa-rocket mr-2"></i> Book a Demo
+                    </button>
+                    <button @click="showCTAModal = true" class="px-8 py-4 glass-card hover:bg-white/90 dark:hover:bg-gray-800/90 rounded-full font-semibold shadow-lg transition-all transform hover:scale-105">
+                        <i class="fas fa-play-circle mr-2"></i> Start Free Trial
+                    </button>
+                </div>
+                
+                <!-- Strapline -->
+                <div class="inline-block glass-card px-6 py-3 rounded-full fade-in-up" style="animation-delay: 0.6s;">
+                    <p class="text-lg font-semibold">
+                        <span class="text-blue-600 dark:text-blue-400">See the Unseen</span>
+                        <span class="mx-2">-</span>
+                        <span class="text-purple-600 dark:text-purple-400">Secure the Inside</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Comprehensive Monitoring Platform</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400">Five integrated pillars for complete visibility and control</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1: Activity Tracking -->
+                <div class="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="fas fa-desktop text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Comprehensive Activity Tracking</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Monitor apps, websites, files, USB devices, clipboards, and screens to capture a complete picture of employees' behaviors.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Application and window monitoring</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Website visit tracking</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> File operation detection</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> USB device events</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Screenshot with OCR</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature Card 2: AI Risk Detection -->
+                <div class="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">AI-Powered Risk Detection</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Leverage NLP and LLM-based analysis, combined with OCR and anomaly detection, to spot insider threats, data leaks, and policy violations in real time.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Credential exposure detection</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Compliance violation alerts</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Phishing URL checks</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Confidence scoring</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Context-aware flagging</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature Card 3: Trust Scoring -->
+                <div class="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Behavior & Trust Scoring</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Translate raw activity into productivity scores and risk levels, helping you identify employees and teams that need attention.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Productivity metrics</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Risk level assessment</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Trend analysis</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Outlier detection</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Coaching insights</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature Card 4: KPI Integration -->
+                <div class="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="fas fa-bullseye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">KPI Management Integration</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Manage goals and expectations organization-wide, then the system will compare them with the actual activities from tracked employees' devices.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> OKR/KPI alignment</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Progress tracking</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Goal cascading</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Performance validation</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> API integration ready</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature Card 5: Smart Attendance -->
+                <div class="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Smart Attendance Insights</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Add attendance and working-hour data into the analysis, creating deeper context for productivity and compliance.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Geo-based clock-in/out</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Location timestamps</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Daily plan tracking</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> EOD result reports</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Geofencing compliance</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature Card 6: API & Integration -->
+                <div class="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <i class="fas fa-plug text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Integrations & APIs</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">REST endpoints for logs, dashboard stats, bulk upload, employee management, and security configuration.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> RESTful API endpoints</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Swagger/Redoc documentation</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Webhook support</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> CSV/JSON exports</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> BI tool compatibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Product Walkthrough -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-dark-secondary/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Real-Time Activity Dashboard</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400">Everything you need in one secure, intuitive view</p>
+            </div>
+            
+            <div class="glass-card rounded-3xl p-8 md:p-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">24/7</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Real-Time Monitoring</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">AI</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Powered Analysis</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">99%</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Detection Accuracy</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-green-600 dark:text-green-400 mb-2"><5s</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Alert Response</div>
+                    </div>
+                </div>
+                
+                <!-- Dashboard Screenshots Slider -->
+                <div class="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-4 md:p-8 overflow-hidden">
+                    <div class="relative slider-aspect" x-data="dashboardSlider()">
+                        <!-- Images -->
+                        <div class="flex transition-transform duration-500 ease-in-out items-stretch" :style="`transform: translateX(-${currentSlide * 100}%)`">
+                            <div class="w-full flex-shrink-0 relative overflow-hidden rounded-lg h-full">
+                                <picture>
+                                    <source media="(max-width: 640px)" srcset="https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-mobile-1.png">
+                                    <img src="https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-1.png" 
+                                         alt="EMS+ Dashboard - Activity Overview" 
+                                         class="w-full h-full object-cover rounded-lg shadow-2xl"
+                                         style="width: 100%; height: 100%; object-position: center;">
+                                </picture>
+                            </div>
+                            <div class="w-full flex-shrink-0 relative overflow-hidden rounded-lg h-full">
+                                <picture>
+                                    <source media="(max-width: 640px)" srcset="https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-mobile-2.png">
+                                    <img src="https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-2.png" 
+                                         alt="EMS+ Dashboard - Risk Detection" 
+                                         class="w-full h-full object-cover rounded-lg shadow-2xl"
+                                         style="width: 100%; height: 100%; object-position: center;">
+                                </picture>
+                            </div>
+                            <div class="w-full flex-shrink-0 relative overflow-hidden rounded-lg h-full">
+                                <picture>
+                                    <source media="(max-width: 640px)" srcset="https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-mobile-3.png">
+                                    <img src="https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-3.png" 
+                                         alt="EMS+ Dashboard - Analytics" 
+                                         class="w-full h-full object-cover rounded-lg shadow-2xl"
+                                         style="width: 100%; height: 100%; object-position: center;">
+                                </picture>
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation Arrows -->
+                        <button @click="previousSlide()" 
+                                class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button @click="nextSlide()" 
+                                class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        
+                        <!-- Dots Indicator -->
+                        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                            <button @click="currentSlide = 0" 
+                                    class="w-3 h-3 rounded-full transition-all"
+                                    :class="currentSlide === 0 ? 'bg-white' : 'bg-white/50'"></button>
+                            <button @click="currentSlide = 1" 
+                                    class="w-3 h-3 rounded-full transition-all"
+                                    :class="currentSlide === 1 ? 'bg-white' : 'bg-white/50'"></button>
+                            <button @click="currentSlide = 2" 
+                                    class="w-3 h-3 rounded-full transition-all"
+                                    :class="currentSlide === 2 ? 'bg-white' : 'bg-white/50'"></button>
+                        </div>
+                        
+                        <!-- Slide Labels -->
+                        <div class="absolute top-4 left-4 right-4 flex justify-between">
+                            <div class="glass px-4 py-2 rounded-lg">
+                                <span class="text-white text-sm font-medium" x-text="slideLabels[currentSlide]"></span>
+                            </div>
+                            <div class="glass px-4 py-2 rounded-lg">
+                                <span class="text-white text-sm font-medium" x-text="`${currentSlide + 1} / 3`"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Security & Compliance -->
+    <section id="security" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Security, Privacy & Compliance</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400">Built-in protections designed for transparency and governance</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card rounded-2xl p-6 text-center hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lock text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Encryption</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">HTTPS/TLS in transit, secure storage at rest</p>
+                </div>
+                
+                <div class="glass-card rounded-2xl p-6 text-center hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-shield text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">RBAC</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Role-based access control for all users</p>
+                </div>
+                
+                <div class="glass-card rounded-2xl p-6 text-center hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clipboard-list text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Audit Trail</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Complete logging of all system actions</p>
+                </div>
+                
+                <div class="glass-card rounded-2xl p-6 text-center hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-database text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Retention</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Configurable data retention policies</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 glass-card rounded-2xl p-8">
+                <h3 class="text-2xl font-bold mb-4 text-center">Technical Security Features</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold mb-3 text-blue-600 dark:text-blue-400">Authentication & Authorization</h4>
+                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> JWT RS256 token-based auth</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> API key authentication for agents</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> SSO integration ready</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Session management and timeout</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-3 text-purple-600 dark:text-purple-400">Data Protection</h4>
+                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> S3/local storage with encryption</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> PostgreSQL/SQLite with secure config</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Redis cache with authentication</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> CORS and throttling safeguards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Use Cases -->
+    <section id="use-cases" class="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-dark-secondary/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Built for Every Team</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400">From HR to IT, everyone benefits from unified insights</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Use Case 1 -->
+                <div class="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                            <i class="fas fa-users text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">HR & People Ops</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Attendance, timesheets, and KPI progress views in one place.</p>
+                            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                                <li><i class="fas fa-arrow-right text-blue-500 mr-2"></i> Automated timesheet generation</li>
+                                <li><i class="fas fa-arrow-right text-blue-500 mr-2"></i> Attendance compliance tracking</li>
+                                <li><i class="fas fa-arrow-right text-blue-500 mr-2"></i> Performance review data</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Use Case 2 -->
+                <div class="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">Security & Compliance</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Insider risk, data leak detection, and full audit trail.</p>
+                            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                                <li><i class="fas fa-arrow-right text-red-500 mr-2"></i> Real-time threat alerts</li>
+                                <li><i class="fas fa-arrow-right text-red-500 mr-2"></i> Compliance reporting</li>
+                                <li><i class="fas fa-arrow-right text-red-500 mr-2"></i> Incident investigation tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Use Case 3 -->
+                <div class="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                            <i class="fas fa-user-tie text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">Department Leaders</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Team productivity dashboards and coaching insights.</p>
+                            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                                <li><i class="fas fa-arrow-right text-purple-500 mr-2"></i> Team performance metrics</li>
+                                <li><i class="fas fa-arrow-right text-purple-500 mr-2"></i> Workload distribution analysis</li>
+                                <li><i class="fas fa-arrow-right text-purple-500 mr-2"></i> Coaching priority identification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Use Case 4 -->
+                <div class="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                            <i class="fas fa-cogs text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">IT & Operations</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Device inventory, agent health, and system metrics at a glance.</p>
+                            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                                <li><i class="fas fa-arrow-right text-green-500 mr-2"></i> Device posture monitoring</li>
+                                <li><i class="fas fa-arrow-right text-green-500 mr-2"></i> Agent connectivity status</li>
+                                <li><i class="fas fa-arrow-right text-green-500 mr-2"></i> System health dashboards</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400">Everything you need to know about EMS+</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="glass-card rounded-xl overflow-hidden" x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/50 dark:hover:bg-gray-800/50 transition">
+                        <span class="font-semibold text-lg">What platforms do the agents support?</span>
+                        <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>Windows and macOS. Agents capture application, website, screenshot/OCR, file, USB, and clipboard events depending on OS capabilities.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-xl overflow-hidden" x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/50 dark:hover:bg-gray-800/50 transition">
+                        <span class="font-semibold text-lg">How is data secured?</span>
+                        <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>HTTPS/TLS in transit, S3/local storage at rest, JWT RS256 auth, role-based access, and full audit logging. Optional throttling and CORS rules for production environments.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-xl overflow-hidden" x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/50 dark:hover:bg-gray-800/50 transition">
+                        <span class="font-semibold text-lg">Can we customize what's monitored?</span>
+                        <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>Yes. Include/exclude rules for directories, screenshot intervals, and sensitive-term lists are fully configurable through the admin dashboard.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-xl overflow-hidden" x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/50 dark:hover:bg-gray-800/50 transition">
+                        <span class="font-semibold text-lg">Does EMS+ replace our OKR/KPI tool?</span>
+                        <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>No. EMS+ integrates with your existing OKR/KPI system, aligning goals with verified device activities and showing progress widgets.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-xl overflow-hidden" x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/50 dark:hover:bg-gray-800/50 transition">
+                        <span class="font-semibold text-lg">How does geo attendance work?</span>
+                        <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>Users clock-in/out with location and timestamp. Daily plans and EOD results are attached to each day. Optional geofencing is available for compliance.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-xl overflow-hidden" x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/50 dark:hover:bg-gray-800/50 transition">
+                        <span class="font-semibold text-lg">Will employees be notified about monitoring?</span>
+                        <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>We recommend transparent policy notices. Admins can provide policy banners and documentation; EMS+ provides audit trails for compliance verification.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-xl overflow-hidden" x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/50 dark:hover:bg-gray-800/50 transition">
+                        <span class="font-semibold text-lg">What about performance impact?</span>
+                        <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>The agent is lightweight, batches events, and uses backoff/retry logic. Screenshot intervals and monitored scopes can be tuned to minimize impact.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-xl overflow-hidden" x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/50 dark:hover:bg-gray-800/50 transition">
+                        <span class="font-semibold text-lg">How do we get data out?</span>
+                        <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>Use our REST APIs, CSV export in the Logs Explorer, or integrate with your BI stack via webhooks and standard data formats.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-xl overflow-hidden" x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/50 dark:hover:bg-gray-800/50 transition">
+                        <span class="font-semibold text-lg">Can we host on-prem?</span>
+                        <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>Yes. The Django backend supports containerized/on-prem deployments with Postgres/Redis/S3-compatible storage.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-card rounded-xl overflow-hidden" x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/50 dark:hover:bg-gray-800/50 transition">
+                        <span class="font-semibold text-lg">What's the typical rollout?</span>
+                        <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>Create admin users, configure security terms, deploy agents with API keys, validate data flow, and iterate monitoring scopes based on organizational needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="glass-card rounded-3xl p-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to See the Unseen?</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">Transform your organization with comprehensive monitoring, aligned goals, and smart attendance-all in one platform.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                    <button @click="showCTAModal = true" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full font-semibold shadow-2xl hover:shadow-blue-500/50 transition-all transform hover:scale-105">
+                        <i class="fas fa-calendar-check mr-2"></i> Book a Demo
+                    </button>
+                    <button @click="showCTAModal = true" class="px-8 py-4 glass hover:bg-white/90 dark:hover:bg-gray-800/90 rounded-full font-semibold shadow-lg transition-all transform hover:scale-105">
+                        <i class="fas fa-rocket mr-2"></i> Start Free Trial
+                    </button>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600 dark:text-gray-400">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>No credit card required</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>14-day free trial</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>Cancel anytime</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="glass border-t border-white/20 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
+                            <img src="https://arnatech.ap-south-1.linodeobjects.com/public%2Femsplus-mark.svg" alt="EMS+ logo" class="w-full h-full" loading="lazy" decoding="async"/>
+                        </div>
+                        <span class="text-xl font-bold">EMS+ by Arnatech</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">AI-powered employee monitoring, KPI management, and smart attendance for modern organizations.</p>
+                    <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-500"></i>
+                            <a href="mailto:contact@arnatech.id" class="hover:text-blue-600 dark:hover:text-blue-400">contact@arnatech.id</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-globe mr-3 text-blue-500"></i>
+                            <a href="https://arnatech.id" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">arnatech.id</a>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 text-blue-500 mt-1"></i>
+                            <span>165 Tower 14th Unit E - TB Simatupang, South Jakarta</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold mb-4">Product</h3>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><a href="#features" class="hover:text-blue-600 dark:hover:text-blue-400">Features</a></li>
+                        <li><a href="#security" class="hover:text-blue-600 dark:hover:text-blue-400">Security</a></li>
+                        <li><a href="#use-cases" class="hover:text-blue-600 dark:hover:text-blue-400">Use Cases</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><a href="#faq" class="hover:text-blue-600 dark:hover:text-blue-400">FAQ</a></li>
+                        <li><button type="button" @click="showPrivacy = true" class="hover:text-blue-600 dark:hover:text-blue-400">Privacy Policy</button></li>
+                        <li><button type="button" @click="showTos = true" class="hover:text-blue-600 dark:hover:text-blue-400">Terms of Service</button></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 dark:text-gray-400">
+                <p>&copy; 2025 ARNA Technology. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <button type="button" @click="showPrivacy = true" class="hover:text-blue-600 dark:hover:text-blue-400">Privacy Policy</button>
+                    <button type="button" @click="showTos = true" class="hover:text-blue-600 dark:hover:text-blue-400">Terms of Service</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- CTA Modal -->
+    <div x-show="showCTAModal" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 z-50 overflow-y-auto" @click.self="showCTAModal = false">
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <!-- Background overlay -->
+            <div class="fixed inset-0 transition-opacity bg-gray-900/75 backdrop-blur-sm" aria-hidden="true"></div>
+            
+            <!-- Modal panel -->
+            <div x-show="showCTAModal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" class="inline-block align-bottom glass-card rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Get Started</h3>
+                        <button @click="showCTAModal = false" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <p class="text-gray-600 dark:text-gray-400 mb-8">Choose how you'd like to connect with us:</p>
+                    
+                    <div class="space-y-4">
+                        <a href="https://wa.me/6285811144421?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20EMS%2B" target="_blank" class="block w-full px-6 py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-green-500/50 transition-all transform hover:scale-105 text-center">
+                            <i class="fab fa-whatsapp mr-3 text-xl"></i> Chat on WhatsApp
+                        </a>
+                        
+                        <a href="mailto:contact@arnatech.id?subject=EMS%2B%20Demo%20Request&body=Hi%2C%0A%0AI%27m%20interested%20in%20scheduling%20a%20demo%20of%20EMS%2B.%0A%0AName%3A%20%0ACompany%3A%20%0ARole%3A%20%0A%0AThank%20you!" class="block w-full px-6 py-4 glass hover:bg-white/90 dark:hover:bg-gray-800/90 rounded-xl font-semibold shadow-lg transition-all transform hover:scale-105 text-center">
+                            <i class="fas fa-envelope mr-3"></i> Email Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div x-show="showPrivacy" x-cloak class="fixed inset-0 z-50 overflow-y-auto" @click.self="showPrivacy = false">
+        <div class="flex items-center justify-center min-h-screen px-4 py-10 text-center">
+            <div class="fixed inset-0 bg-gray-900/75 backdrop-blur-sm"></div>
+            <div class="relative glass-card rounded-3xl text-left overflow-hidden shadow-2xl sm:max-w-3xl w-full">
+                <div class="p-8 max-h-[80vh] overflow-y-auto">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold">Privacy Policy</h3>
+                        <button @click="showPrivacy = false" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <div class="prose prose-invert max-w-none text-gray-200 policy-content">
+                        <p class="text-sm opacity-80">Last updated: 13 Oct 2025</p>
+                        <h4>1. Who We Are</h4>
+                        <p>EMS+ is an employee monitoring and productivity platform operated by your organization (the “Customer”). In most deployments, the Customer is the <strong>Data Controller</strong> of the personal data processed in EMS+, and ARNA Technology acts as a <strong>Data Processor</strong>/service provider. Where ARNA Technology operates EMS+ directly for a client, ARNA Technology may act as controller for limited service operations data (e.g., support tickets, billing contacts).</p>
+
+                        <h4>2. Scope</h4>
+                        <p>This Privacy Policy describes how EMS+ processes information collected from endpoints (devices), users, and administrators when the platform is used by Customer’s workforce. It does not replace your company’s internal monitoring policy; rather, it should be read together with it.</p>
+
+                        <h4>3. Information We Collect</h4>
+                        <ul>
+                            <li><strong>Activity & Usage Data</strong>: application names, window titles, website titles/URLs, durations, clipboard text events (if enabled), file operations metadata (path, action, size), and USB device events.</li>
+                            <li><strong>Screenshots & OCR</strong>: screen images and extracted text, captured at configured intervals or triggers (if enabled).</li>
+                            <li><strong>Device & Technical Data</strong>: device identifiers, operating system, timestamps, agent status, IPs/logs necessary for security and troubleshooting.</li>
+                            <li><strong>Attendance Data</strong>: clock-in/out timestamps, geolocation at attendance events, daily plan and end-of-day notes (if attendance is enabled).</li>
+                            <li><strong>Account & Admin Data</strong>: names, emails, roles/permissions for platform administrators and users.</li>
+                        </ul>
+
+                        <h4>4. Purposes of Processing</h4>
+                        <ul>
+                            <li>Provide monitoring dashboards, analytics, alerts, exports, and audit logs to authorized users.</li>
+                            <li>Help detect policy violations, insider risk, phishing, and data leakage using configured rules and AI-assisted analysis.</li>
+                            <li>Support productivity measurement (e.g., behavior/trust scoring) and operational insights.</li>
+                            <li>Enable attendance, workforce management, and compliance reporting.</li>
+                            <li>Secure, maintain, and improve the platform; debug incidents; prevent fraud and abuse.</li>
+                        </ul>
+
+                        <h4>5. Legal Bases</h4>
+                        <p>Depending on jurisdiction and Customer policy, processing may rely on one or more of: legitimate interests in security and productivity; performance of a contract; compliance with legal obligations; or consent where required. The Customer determines the appropriate legal basis for workforce monitoring within its organization.</p>
+
+                        <h4>6. Data Sharing & Transfers</h4>
+                        <ul>
+                            <li><strong>Sub‑processors</strong>: cloud storage (e.g., S3‑compatible), email/push notification providers, analytics and security vendors used to operate EMS+. We require appropriate data protection commitments by contract.</li>
+                            <li><strong>Intra‑group/International Transfers</strong>: where data moves across borders, we use appropriate safeguards (e.g., SCCs or equivalent mechanisms) as applicable.</li>
+                            <li><strong>Legal Requests</strong>: data may be disclosed to competent authorities when required by law, following due process.</li>
+                        </ul>
+
+                        <h4>7. Security</h4>
+                        <ul>
+                            <li>Transport security via HTTPS/TLS; signed JWT (RS256) for API access.</li>
+                            <li>Role‑based access control, audit logging, and configurable throttling/CORS.</li>
+                            <li>Media in S3/local storage per deployment; access controlled by Customer policy.</li>
+                        </ul>
+
+                        <h4>8. Retention</h4>
+                        <p>Retention periods are defined by the Customer’s policy and regulatory requirements. EMS+ provides tools to configure retention, export data, and delete content upon authorized request.</p>
+
+                        <h4>9. Your Rights</h4>
+                        <p>Subject to applicable law and relationship with the Customer, you may have rights to access, rectify, erase, restrict, port, or object to processing of your personal data. Requests should be directed to your employer (the Customer). ARNA Technology will support the Customer in responding to such requests.</p>
+
+                        <h4>10. Cookies & Similar Technologies</h4>
+                        <p>EMS+ primarily uses essential cookies/local storage for authentication and preferences (e.g., theme). Optional analytics cookies are only used if configured by the Customer with appropriate notices.</p>
+
+                        <h4>11. Children</h4>
+                        <p>EMS+ is a business product not intended for children. It should only be used for workforce monitoring by organizations.</p>
+
+                        <h4>12. Contact</h4>
+                        <p>Questions about this policy or data protection should be sent to <a href="mailto:contact@arnatech.id" class="underline">contact@arnatech.id</a>. For workforce monitoring matters, contact your organization’s administrator or HR.</p>
+
+                        <h4>13. Changes</h4>
+                        <p>We may update this Privacy Policy to reflect operational, legal, or regulatory changes. Material changes will be communicated through the product or via the Customer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div x-show="showTos" x-cloak class="fixed inset-0 z-50 overflow-y-auto" @click.self="showTos = false">
+        <div class="flex items-center justify-center min-h-screen px-4 py-10 text-center">
+            <div class="fixed inset-0 bg-gray-900/75 backdrop-blur-sm"></div>
+            <div class="relative glass-card rounded-3xl text-left overflow-hidden shadow-2xl sm:max-w-3xl w-full">
+                <div class="p-8 max-h-[80vh] overflow-y-auto">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold">Terms of Service</h3>
+                        <button @click="showTos = false" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <div class="prose prose-invert max-w-none text-gray-200 policy-content">
+                        <p class="text-sm opacity-80">Last updated: 13 Oct 2025</p>
+                        <h4>1. Agreement to Terms</h4>
+                        <p>These Terms of Service (the “Terms”) govern access to and use of EMS+ by organizations and their authorized users (“Customer”, “you”). By accessing EMS+, you agree to these Terms and any policies referenced herein.</p>
+
+                        <h4>2. Accounts & Access</h4>
+                        <ul>
+                            <li>Customer is responsible for configuring roles/permissions and for maintaining the confidentiality of credentials.</li>
+                            <li>Customer ensures users are authorized and comply with applicable laws and corporate policies.</li>
+                            <li>Customer remains responsible for activities conducted under its accounts.</li>
+                        </ul>
+
+                        <h4>3. Acceptable Use</h4>
+                        <ul>
+                            <li>No interference with or disruption of the service or networks.</li>
+                            <li>No attempts to bypass or defeat security controls.</li>
+                            <li>No reverse engineering except as permitted by law.</li>
+                            <li>No use that violates privacy, employment, export, or other applicable laws.</li>
+                        </ul>
+
+                        <h4>4. Customer Data & Ownership</h4>
+                        <p>All monitoring data and content collected through EMS+ is owned and controlled by the Customer. ARNA Technology processes such data solely to provide the service, in accordance with Customer instructions and applicable data protection agreements.</p>
+
+                        <h4>5. Security & Privacy</h4>
+                        <p>We implement administrative, technical, and physical safeguards appropriate to the risk, including HTTPS/TLS, RBAC, audit logs, and secure storage. Privacy practices are described in our Privacy Policy.</p>
+
+                        <h4>6. Availability & Support</h4>
+                        <p>We aim for high availability but do not guarantee uninterrupted operation. Planned maintenance or factors beyond our control may cause downtime. Support scope and SLAs (if any) are defined in the applicable order or agreement.</p>
+
+                        <h4>7. Third‑Party Services</h4>
+                        <p>EMS+ may integrate with third‑party services (e.g., storage, notifications, OKR/attendance systems). Customer’s use of third‑party services is governed by those providers’ terms and privacy notices.</p>
+
+                        <h4>8. Term & Termination</h4>
+                        <ul>
+                            <li>These Terms apply for the subscription term or while you access EMS+.</li>
+                            <li>Either party may terminate for material breach not cured within a reasonable period.</li>
+                            <li>Upon termination, Customer may export data within a limited window; thereafter data may be deleted according to retention policies.</li>
+                        </ul>
+
+                        <h4>9. Warranties & Disclaimers</h4>
+                        <p>EMS+ is provided “as is” and “as available.” To the maximum extent permitted by law, we disclaim implied warranties of merchantability, fitness for a particular purpose, and non‑infringement.</p>
+
+                        <h4>10. Limitation of Liability</h4>
+                        <p>To the maximum extent permitted by law, neither party will be liable for indirect, incidental, special, consequential, or punitive damages, or for lost profits, revenues, or data. Each party’s aggregate liability under these Terms is limited to the amounts paid or payable for the service in the 12 months preceding the claim.</p>
+
+                        <h4>11. Confidentiality</h4>
+                        <p>Each party will protect the other’s confidential information with at least reasonable care and use it only as necessary to perform under these Terms.</p>
+
+                        <h4>12. Compliance</h4>
+                        <p>Customer is responsible for implementing the service in a manner compliant with labor, privacy, and monitoring laws applicable to its workforce (including providing required notices and obtaining consents where necessary).</p>
+
+                        <h4>13. Governing Law</h4>
+                        <p>These Terms are governed by the laws applicable at ARNA Technology’s principal place of business, without regard to conflict‑of‑law principles, unless otherwise agreed in writing.</p>
+
+                        <h4>14. Changes</h4>
+                        <p>We may update these Terms to reflect operational or legal changes. Material changes will be communicated through the product or via the Customer. Continued use after changes becomes effective constitutes acceptance.</p>
+
+                        <h4>15. Contact</h4>
+                        <p>For questions about these Terms, contact <a href="mailto:contact@arnatech.id" class="underline">contact@arnatech.id</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function landingPage() {
+            return {
+                mobileMenuOpen: false,
+                showCTAModal: false,
+                showPrivacy: false,
+                showTos: false,
+                init() {
+                    // Initialize dark mode from localStorage or system preference
+                    const savedTheme = localStorage.getItem('darkMode');
+                    if (savedTheme === null) {
+                        // First visit - check system preference
+                        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                        localStorage.setItem('darkMode', prefersDark);
+                        this.darkMode = prefersDark;
+                    } else {
+                        // Use saved preference
+                        this.darkMode = savedTheme === 'true';
+                    }
+                    
+                    // Listen for system theme changes
+                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                        // Only update if user hasn't manually set a preference
+                        if (localStorage.getItem('darkMode') === null) {
+                            this.darkMode = e.matches;
+                            localStorage.setItem('darkMode', e.matches);
+                        }
+                    });
+                }
+            }
+        }
+        
+        function dashboardSlider() {
+            return {
+                currentSlide: 0,
+                slideLabels: [
+                    'Activity Overview',
+                    'Risk Detection',
+                    'Analytics Dashboard'
+                ],
+                nextSlide() {
+                    this.currentSlide = (this.currentSlide + 1) % 3;
+                },
+                previousSlide() {
+                    this.currentSlide = this.currentSlide === 0 ? 2 : this.currentSlide - 1;
+                },
+                init() {
+                    // Auto-advance slides every 5 seconds
+                    setInterval(() => {
+                        this.nextSlide();
+                    }, 5000);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
