@@ -9,11 +9,11 @@ const NAV_LINKS = [
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const saved = localStorage.getItem("darkMode");
-    const isDark = saved !== null ? saved === "true" : false;
+    const isDark = saved !== null ? saved === "true" : true; 
     setDarkMode(isDark);
     applyTheme(isDark);
   }, []);

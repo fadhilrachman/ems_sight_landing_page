@@ -36,7 +36,7 @@ export default function Head() {
       <script dangerouslySetInnerHTML={{ __html: `
         (function() {
           var saved = localStorage.getItem('darkMode');
-          if (saved === 'true') {
+          if (saved !== 'false') {
             document.documentElement.classList.add('dark');
           }
         })();
