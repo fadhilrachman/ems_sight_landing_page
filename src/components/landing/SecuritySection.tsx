@@ -7,14 +7,11 @@ const securityCards = [
 
 export function SecuritySection() {
   return (
-    <section
-      id="security"
-      style={{ paddingTop: "5rem", paddingBottom: "5rem", paddingLeft: "1rem", paddingRight: "1rem" }}
-    >
-      <div style={{ maxWidth: "80rem", margin: "0 auto" }}>
+    <section id="security" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
 
-        <div className="text-center" style={{ marginBottom: "4rem" }}>
-          <h2 className="text-4xl md:text-5xl font-bold" style={{ marginBottom: "1rem" }}>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Security, Privacy &amp; Compliance
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400">
@@ -22,51 +19,46 @@ export function SecuritySection() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "2rem", marginBottom: "3rem" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {securityCards.map((card, i) => (
-            <div key={i} className="glass-card rounded-2xl text-center hover:shadow-xl transition-all" style={{ padding: "1.5rem" }}>
-              <div className={`bg-gradient-to-br ${card.gradient} rounded-xl flex items-center justify-center`} style={{ width: "3rem", height: "3rem", margin: "0 auto 1rem" }}>
+            <div key={i} className="glass-card rounded-2xl p-6 text-center hover:shadow-xl transition-all">
+              <div className={`w-12 h-12 bg-gradient-to-br ${card.gradient} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                 <i className={`${card.icon} text-white text-xl`} />
               </div>
-              <h3 className="font-bold text-lg" style={{ marginBottom: "0.5rem" }}>{card.title}</h3>
+              <h3 className="font-bold text-lg mb-2">{card.title}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">{card.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="glass-card rounded-2xl" style={{ padding: "2rem" }}>
-          <h3 className="text-2xl font-bold text-center" style={{ marginBottom: "1rem" }}>
-            Technical Security Features
-          </h3>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
-            {/* Col 1 — Authentication & Authorization */}
+        <div className="mt-12 glass-card rounded-2xl p-8">
+          <h3 className="text-2xl font-bold mb-4 text-center">Technical Security Features</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold text-blue-600 dark:text-blue-400" style={{ marginBottom: "0.75rem" }}>
+              <h4 className="font-semibold mb-3 text-blue-600 dark:text-blue-400">
                 Authentication &amp; Authorization
               </h4>
-              <ul className="text-sm text-gray-600 dark:text-gray-400" style={{ display: "flex", flexDirection: "column", gap: "0.5rem", listStyle: "none", padding: 0, margin: 0 }}>
-                <li><i className="fas fa-check-circle text-green-500" style={{ marginRight: "0.5rem" }} />JWT RS256 token-based auth</li>
-                <li><i className="fas fa-check-circle text-green-500" style={{ marginRight: "0.5rem" }} />API key authentication for agents</li>
-                <li><i className="fas fa-check-circle text-green-500" style={{ marginRight: "0.5rem" }} />SSO integration ready</li>
-                <li><i className="fas fa-check-circle text-green-500" style={{ marginRight: "0.5rem" }} />Session management and timeout</li>
+              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li><i className="fas fa-check-circle text-green-500 mr-2" />JWT RS256 token-based auth</li>
+                <li><i className="fas fa-check-circle text-green-500 mr-2" />API key authentication for agents</li>
+                <li><i className="fas fa-check-circle text-green-500 mr-2" />SSO integration ready</li>
+                <li><i className="fas fa-check-circle text-green-500 mr-2" />Session management and timeout</li>
               </ul>
             </div>
-
-            {/* Col 2 — Data Protection */}
             <div>
-              <h4 className="font-semibold text-purple-600 dark:text-purple-400" style={{ marginBottom: "0.75rem" }}>
+              <h4 className="font-semibold mb-3 text-purple-600 dark:text-purple-400">
                 Data Protection
               </h4>
-              <ul className="text-sm text-gray-600 dark:text-gray-400" style={{ display: "flex", flexDirection: "column", gap: "0.5rem", listStyle: "none", padding: 0, margin: 0 }}>
-                <li><i className="fas fa-check-circle text-green-500" style={{ marginRight: "0.5rem" }} />S3/local storage with encryption</li>
-                <li><i className="fas fa-check-circle text-green-500" style={{ marginRight: "0.5rem" }} />PostgreSQL/SQLite with secure config</li>
-                <li><i className="fas fa-check-circle text-green-500" style={{ marginRight: "0.5rem" }} />Redis cache with authentication</li>
-                <li><i className="fas fa-check-circle text-green-500" style={{ marginRight: "0.5rem" }} />CORS and throttling safeguards</li>
+              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li><i className="fas fa-check-circle text-green-500 mr-2" />S3/local storage with encryption</li>
+                <li><i className="fas fa-check-circle text-green-500 mr-2" />PostgreSQL/SQLite with secure config</li>
+                <li><i className="fas fa-check-circle text-green-500 mr-2" />Redis cache with authentication</li>
+                <li><i className="fas fa-check-circle text-green-500 mr-2" />CORS and throttling safeguards</li>
               </ul>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

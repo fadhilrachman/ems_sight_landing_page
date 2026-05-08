@@ -2,7 +2,7 @@ import "../styles/main.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen font-sans antialiased">
+    <div>
       {children}
     </div>
   );

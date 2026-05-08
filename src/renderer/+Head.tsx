@@ -3,26 +3,36 @@ export default function Head() {
     <>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta
-        name="description"
-        content="AI-powered activity monitoring, KPI management, and smart attendance for sharper productivity, stronger security, and smarter insights."
-      />
+      <title>EMS+ | Monitor. Align. Attend.</title>
+      <meta name="description" content="AI-powered activity monitoring, KPI management, and smart attendance for sharper productivity, stronger security, and smarter insights." />
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="keywords" content="Employee Monitoring System, EMS, EMS+, AI monitoring, KPI, OKR, smart attendance, geo attendance, geofencing, productivity analytics, ARNA Technology" />
+      <meta name="author" content="ARNA Technology" />
+      <meta name="theme-color" content="#0a0a0f" />
+
+      <link rel="canonical" href="https://emsight.id/" />
+      <link rel="icon" type="image/svg+xml" href="https://arnatech.ap-south-1.linodeobjects.com/public%2Femsplus-mark.svg" />
+
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:type" content="website" />
       <meta property="og:title" content="EMS+ | Monitor. Align. Attend." />
-      <meta
-        property="og:description"
-        content="AI-powered activity monitoring, KPI management, and smart attendance for sharper productivity, stronger security, and smarter insights."
-      />
+      <meta property="og:description" content="AI-powered activity monitoring, KPI management, and smart attendance for sharper productivity, stronger security, and smarter insights." />
       <meta property="og:url" content="https://emsight.id/" />
-      <link rel="icon" type="image/svg+xml" href="/emsplus-mark.svg" />
-      {/* Font Awesome 5 — same CDN used by emsight.id for fas fa-sun / fa-moon toggle */}
+      <meta property="og:site_name" content="ARNA Technology" />
+      <meta property="og:image" content="https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-2.png" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="EMS+ | Monitor. Align. Attend." />
+      <meta name="twitter:description" content="AI-powered activity monitoring, KPI management, and smart attendance for sharper productivity, stronger security, and smarter insights." />
+      <meta name="twitter:image" content="https://arnatech.ap-south-1.linodeobjects.com/public%2Fems-dashboard-2.png" />
+
+      {/* Font Awesome 6.4.0 — same version as emsight.id reference */}
       <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossOrigin="anonymous"
-        referrerPolicy="no-referrer"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       />
-      {/* Anti-FOUC: apply dark class BEFORE React hydrates — prevents body gradient flash */}
+
+      {/* Anti-FOUC: apply dark class BEFORE React hydrates */}
       <script dangerouslySetInnerHTML={{ __html: `
         (function() {
           var saved = localStorage.getItem('darkMode');
@@ -31,7 +41,6 @@ export default function Head() {
           }
         })();
       `}} />
-      <title>EMS+ | Monitor. Align. Attend.</title>
     </>
   );
 }

@@ -21,12 +21,9 @@ export function Navbar() {
   const applyTheme = (isDark: boolean) => {
     if (isDark) {
       document.documentElement.classList.add("dark");
-      document.documentElement.classList.remove("light");
     } else {
       document.documentElement.classList.remove("dark");
-      document.documentElement.classList.add("light");
     }
-    document.body.style.color = isDark ? "#f3f4f6" : "#1f2937";
   };
 
   const toggleDarkMode = () => {
@@ -38,14 +35,12 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass shadow-lg">
-      <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1rem" }}>
-        <div className="flex justify-between items-center" style={{ height: "4rem" }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
 
-          <div className="flex items-center" style={{ gap: "0.75rem" }}>
-            <div
-              className="rounded-lg flex items-center justify-center shadow-lg overflow-hidden"
-              style={{ width: "2.5rem", height: "2.5rem", flexShrink: 0 }}
-            >
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center shadow-lg overflow-hidden">
               <img
                 src="https://arnatech.ap-south-1.linodeobjects.com/public%2Femsplus-mark.svg"
                 alt="EMS+ logo"
@@ -57,28 +52,30 @@ export function Navbar() {
             </span>
           </div>
 
-          <div className="hidden md:flex items-center" style={{ gap: "2rem" }}>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                className="hover:text-blue-600 dark:hover:text-blue-400 transition"
               >
                 {link.label}
               </a>
             ))}
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-lg hover:bg-white/20 dark:hover:bg-gray-800/50 transition-colors duration-200 text-gray-700 dark:text-gray-300"
+              className="p-2 rounded-lg hover:bg-white/20 dark:hover:bg-gray-800/50 transition"
               aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
             >
               <i className={`fas ${darkMode ? "fa-sun" : "fa-moon"}`} />
             </button>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen((prev) => !prev)}
-            className="md:hidden p-2 rounded-lg hover:bg-white/20 dark:hover:bg-gray-800/50 transition-colors text-gray-700 dark:text-gray-300"
+            className="md:hidden p-2 rounded-lg hover:bg-white/20 dark:hover:bg-gray-800/50"
             aria-label="Toggle mobile menu"
           >
             <i className={`fas ${mobileMenuOpen ? "fa-times" : "fa-bars"}`} />
@@ -87,15 +84,16 @@ export function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden glass-card border-t border-white/20">
-          <div className="px-4 py-4" style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+          <div className="px-4 py-4 space-y-3">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition"
               >
                 {link.label}
               </a>

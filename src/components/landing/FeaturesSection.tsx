@@ -81,14 +81,11 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section
-      id="features"
-      style={{ paddingTop: "5rem", paddingBottom: "5rem", paddingLeft: "1rem", paddingRight: "1rem" }}
-    >
-      <div style={{ maxWidth: "80rem", margin: "0 auto" }}>
+    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
 
-        <div className="text-center" style={{ marginBottom: "4rem" }}>
-          <h2 className="text-4xl md:text-5xl font-bold" style={{ marginBottom: "1rem" }}>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Comprehensive Monitoring Platform
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400">
@@ -96,41 +93,28 @@ export function FeaturesSection() {
           </p>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "2rem",
-          }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="glass-card rounded-2xl hover:shadow-2xl transition-all transform hover:-translate-y-2 group"
-              style={{ padding: "2rem" }}
+              className="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2 group"
             >
               <div
-                className={`bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}
-                style={{ width: "4rem", height: "4rem", marginBottom: "1.5rem" }}
+                className={`w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}
               >
                 <i className={`${feature.icon} text-white text-2xl`} />
               </div>
 
-              <h3 className="text-2xl font-bold" style={{ marginBottom: "1rem" }}>
-                {feature.title}
-              </h3>
+              <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
 
-              <p className="text-gray-600 dark:text-gray-400" style={{ marginBottom: "1rem" }}>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
                 {feature.description}
               </p>
 
-              <ul
-                className="text-sm text-gray-600 dark:text-gray-400"
-                style={{ display: "flex", flexDirection: "column", gap: "0.5rem", listStyle: "none", padding: 0, margin: 0 }}
-              >
+              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 {feature.bullets.map((bullet, i) => (
-                  <li key={i} style={{ display: "flex", alignItems: "center" }}>
-                    <i className="fas fa-check text-green-500" style={{ marginRight: "0.5rem", flexShrink: 0 }} />
+                  <li key={i}>
+                    <i className="fas fa-check text-green-500 mr-2" />
                     {bullet}
                   </li>
                 ))}
